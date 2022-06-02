@@ -1,0 +1,15 @@
+.img {
+    width: 300px;
+    height: 400px;
+}
+
+.col-4 {
+    width: 25%;
+}
+.hero__title {
+    display: flex;
+    justify-content: start;
+    color: #010049;
+}
+
+
