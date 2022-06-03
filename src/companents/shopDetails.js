@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 import {Link, useParams} from "react-router-dom";
 import {useDispatch, useSelector} from "react-redux";
 import {addToBasket, getCategoryList, getProdDetail, getProdList} from "../redux/action/action";
@@ -7,6 +7,7 @@ import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
 import BooksCard from "./card/booksCard";
 import CategoryCartBooks from "./card/categoryCartBooks";
 import Slider from "react-slick";
+import Modal from "./Modal";
 
 const ShopDetails = () => {
     const {id} = useParams()
@@ -26,7 +27,6 @@ const ShopDetails = () => {
         dispatch(getProdDetail(id))
         dispatch(getProdList())
     }, [])
-
 
     const categorySettings = {
         dots: true,
@@ -62,7 +62,7 @@ const ShopDetails = () => {
             }
         ]
     };
-
+    const [modalActive, setModalActive] = useState(true)
 
 
     return (
@@ -85,12 +85,16 @@ const ShopDetails = () => {
                             basketItems ? <button
                                 className="bg-blue-300 hover:bg-gray-700 text-white font-bold py-2 px-4 rounded my-4">
                                 <FontAwesomeIcon icon={faCheck}/>Добавлено</button> : <button
-                                className="bg-gray-200 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded my-4 "
+                                className="bg-gray-200 hover:bg-blue-700 text-black font-bold py-2 px-4 rounded my-4 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ..."
                                 onClick={() => dispatch(addToBasket(prodDetail))}
                             ><FontAwesomeIcon icon={faBagShopping}/> добавить в корзину</button>
                         }
-                        <button className="bg-gray-200 hover:bg-gray-600 text-black font-bold py-2 px-4 rounded my-4"
-                        >Купить сейчас</button>
+                            <button  onClick={() => setModalActive(true)} className="bg-gray-200 hover:bg-gray-600 text-black font-bold py-2 px-4 rounded my-4 transition ease-in-out delay-150  hover:-translate-y-1 hover:scale-110 hover:bg-indigo-500 duration-300 ..."
+                            >Купить сейчас</button>
+
+                            <Modal active={modalActive} setActive={setModalActive}>
+                                     <p></p>
+                            </Modal>
                     </div>
                 </div>
             </div>

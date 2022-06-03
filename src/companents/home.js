@@ -106,6 +106,8 @@ const Home = () => {
                         product.map(el => (
                             <div key={el.id}>
                                 <BooksCard el={el} />
+                                {/*<div className="card__title">{`${el.description} `}</div>*/}
+
                             </div>
                         ))
                     }

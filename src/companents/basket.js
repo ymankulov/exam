@@ -6,6 +6,7 @@ import CategoryCartBooks from "./card/categoryCartBooks";
 import Slider from "react-slick";
 import BooksCard from "./card/booksCard";
 
+
 const Basket = () => {
     const {basket: el} = useSelector(s => s)
     console.log(el, "ELEMENT")
@@ -15,7 +16,7 @@ const Basket = () => {
         <div className="min-h-screen bg-indigo-50 py-5">
             <div className="w-8/12 mx-auto bg-white shadow-lg border rounded-md ">
                 {
-                    el.length === 0 ? <div>Корзина пусто!!!</div> :
+                    el.length === 0 ? <div className='text-3xl text-center'>Корзина пусто!!!</div> :
                         <div>
                             <div className="w-[80%] mx-auto ">
                                 {
@@ -34,16 +35,16 @@ const Basket = () => {
                                                     <p className="text-md pt-20 pr-16  font-medium">${el.price * el.quantity}</p>
                                                     <span className="text-md pt-5  font-medium">
                                                     <button
-                                                        className="bg-black hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
+                                                        className="bg-black hover:bg-gray-500 text-white font-bold py-2 px-4 rounded"
                                                         onClick={() => dispatch(addToBasket(el))}>+</button>
                                                     Количество : {el.quantity}
                                                         <button
-                                                            className="bg-blue-300 hover:bg-gray-800 text-white font-bold py-2 px-4 rounded"
+                                                            className="bg-black hover:bg-gray-500 text-white font-bold py-2 px-4 rounded"
                                                             onClick={() => dispatch(DecreaseToBasket(idx))}>-</button>
                                                     </span>
                                                     <button
                                                         onClick={() => dispatch(RemoveProductBasket(el.id))}
-                                                        className="bg-gray-50 rounded shadow-lg py-3  text-blue-700  text-md mt-5 ml-48 font-medium">Remove
+                                                        className="bg-gray-50 rounded shadow-lg py-3  text-black hover:bg-gray-300 text-md mt-5 ml-48 font-medium">Remove
                                                     </button>
                                                 </div>
                                             </div>
