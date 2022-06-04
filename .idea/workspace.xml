@@ -2,14 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="4e821ced-dea8-44cf-af14-5cd30583c202" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/companents/Modal.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/companents/basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/companents/basket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/companents/card/basketCardProduct.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/companents/card/basketCardProduct.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/companents/card/booksCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/companents/card/booksCard.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/companents/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/companents/home.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/companents/shopDetails.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/companents/shopDetails.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,7 +50,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1654211493725</updated>
-      <workItem from="1654211495745" duration="6615000" />
+      <workItem from="1654211495745" duration="7090000" />
+      <workItem from="1654298698423" duration="1301000" />
     </task>
     <servers />
   </component>

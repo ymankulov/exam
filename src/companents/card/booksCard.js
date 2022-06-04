@@ -1,7 +1,23 @@
-import React from 'react';
-import {Link} from "react-router-dom";
+import React, {useEffect} from 'react';
+import {Link, NavLink} from "react-router-dom";
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import { faCircleArrowRight} from "@fortawesome/free-solid-svg-icons";
+import {useDispatch, useSelector} from "react-redux";
+import {addToBasket, } from "../../redux/action/action";
+import { faBasketShopping } from '@fortawesome/free-solid-svg-icons'
+
 
 const BooksCard = ({el}) => {
+    const {basket} = useSelector(s => s)
+
+
+    const dispatch = useDispatch()
+
+    const basketId = basket.find(product => product.id === el.id)
+    const notifyBasket = (el) => {
+        dispatch(addToBasket(el));
+
+    }
 
     return (
         <div className="sm:basis-1  md:basis-1/2 lg:basis-1/3 xl:basis-1/4 my-5 text-center flex justify-center" key={el.id}>
@@ -18,8 +34,15 @@ const BooksCard = ({el}) => {
                 <span className="flex flex-col mt-3">
                     <div className="flex justify-between">
                       <h4 className="font-head font-medium  w-60 text-left">{el.title}</h4>
-                        <div className="bg-blue-300 hover:bg-black text-white font-bold py-2 px-4 rounded">
+                        <div className="bg-blue-300 hover:bg-black text-white font-bold py-2 px-4 rounded flex flex-wrap:wrap">
                             <p>{`${el.price} сом`}</p>
+                             <button onClick={() =>  basketId ? null : notifyBasket(el)
+
+                             }
+                                     className='product--info__icons--bg'>
+                    {basketId ?
+                        <Link to='/Basket'><FontAwesomeIcon className='product--info__icons__icon' icon={faCircleArrowRight}/> </Link>: <FontAwesomeIcon className='product--info__icons__icon' icon={faBasketShopping}/>}
+                </button>
                         </div>
 
                     </div>
@@ -27,6 +50,7 @@ const BooksCard = ({el}) => {
                             {`${el.description} `}</div>
 
                 </span>
+
             </div>
 
         </div>

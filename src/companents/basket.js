@@ -27,20 +27,28 @@ const Basket = () => {
 
                                             <div className="w-full  flex justify-between pt-5">
                                                 <div className="w-[50%] flex justify-between ">
-                                                    <img src={el.img} alt="image"
+                                                    <img src={el.image} alt="image"
                                                          className="w-6/12 h-72 mr-2 object-cover rounded-md"/>
-                                                    <p className="text-md pt-20 font-medium ">{el.name}</p>
+                                                    <div>
+                                                        <h1 className="text-md pt-2 font-medium text-2xl">{el.title}</h1>
+                                                        <h1 className="text-md pt-2 font-medium text-xs ">{el.description}</h1>
+                                                    </div>
+
                                                 </div>
+
                                                 <div className="flex flex-col w-[50%] text-right pr-10">
                                                     <p className="text-md pt-20 pr-16  font-medium">${el.price * el.quantity}</p>
                                                     <span className="text-md pt-5  font-medium">
-                                                    <button
-                                                        className="bg-black hover:bg-gray-500 text-white font-bold py-2 px-4 rounded"
-                                                        onClick={() => dispatch(addToBasket(el))}>+</button>
+                                                        <div className='flex justify-between'>
+                                                             <button
+                                                                 className="bg-black hover:bg-gray-500 text-white font-bold py-2 px-4 rounded"
+                                                                        onClick={() => dispatch(addToBasket(el))}>+</button>
                                                     Количество : {el.quantity}
-                                                        <button
-                                                            className="bg-black hover:bg-gray-500 text-white font-bold py-2 px-4 rounded"
-                                                            onClick={() => dispatch(DecreaseToBasket(idx))}>-</button>
+                                                            <button
+                                                                className="bg-black hover:bg-gray-500 text-white font-bold py-2 px-4 rounded"
+                                                                onClick={() => dispatch(DecreaseToBasket(idx))}>-</button>
+                                                        </div>
+
                                                     </span>
                                                     <button
                                                         onClick={() => dispatch(RemoveProductBasket(el.id))}
