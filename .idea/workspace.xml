@@ -3,9 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="4e821ced-dea8-44cf-af14-5cd30583c202" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/companents/basket.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/companents/basket.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/companents/card/booksCard.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/companents/card/booksCard.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/companents/home.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/companents/home.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,14 +32,15 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="list.type.of.created.stylesheet" value="CSS" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="vue.rearranger.settings.migration" value="true" />
-  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "WebServerToolWindowFactoryState": "false",
+    "node.js.detected.package.eslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
@@ -52,6 +51,10 @@
       <updated>1654211493725</updated>
       <workItem from="1654211495745" duration="7090000" />
       <workItem from="1654298698423" duration="1301000" />
+      <workItem from="1654302238678" duration="206000" />
+      <workItem from="1654482557795" duration="569000" />
+      <workItem from="1654483156618" duration="1319000" />
+      <workItem from="1654503298286" duration="1166000" />
     </task>
     <servers />
   </component>
